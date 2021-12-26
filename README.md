@@ -1,2 +1,2 @@
-# BJ_solving_C-
+# BJ_solving
 bj_solving

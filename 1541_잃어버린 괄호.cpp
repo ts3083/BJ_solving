@@ -1,47 +1,33 @@
 #include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
 
 int main()
 {
-	int index_start = 0;
+	int sum = 0;
 	int result = 0;
 	int index_end = 0;
 	string s;
-	vector<int> v;
+	string temp = "";
 	cin >> s;
-	
-	for (int i = 0; i < s.length(); i++) {
-		if (s[i] == '+') { // + 라면
-			index_end = i;
-			result += stoi(s.substr(index_start, index_end - index_start));
-			index_start = i + 1;
-		}
-		else if(s[i] == '-') { // - 라면
-			index_end = i;
-			result += stoi(s.substr(index_start, index_end - index_start));
-			v.push_back(result);
-			result = 0;
-			index_start = i + 1;
-		}
 
-		if (i == s.length() - 1) {
-			result += stoi(s.substr(index_start));
-			v.push_back(result);
+	for (int i = 0; i <= s.length(); i++) {
+		if (s[i] == '+' || s[i] == '-' || s[i] == '\0') {
+			if (result) {
+				sum -= stoi(temp);
+			}
+			else {
+				sum += stoi(temp);
+			}
+			if (s[i] == '-') {
+				result = 1; // -가 1번만 등장해도 뒤의 모든 숫자들을 빼주면 된다.
+			}
+			temp = ""; // temp에 저장된 문자열 초기화
+			continue;
 		}
+		temp += s[i];
 	}
-
-	int sum = v[0];
-	if (v.size() == 1) {
-		cout << sum << '\n';
-	}
-	else {
-		for (int i = 1; i < v.size(); i++) {
-			sum -= v[i];
-		}
-		cout << sum << '\n';
-	}
+	cout << sum << '\n';
 
 	return 0;
 }

@@ -3,14 +3,14 @@
 using namespace std;
 
 bool is_prime_number(int x) {
-	// 2ºÎÅÍ x-1±îÁö ¸ğµç ¼ö¸¦ È®ÀÎ
+	// 2ë¶€í„° x-1ê¹Œì§€ ëª¨ë“  ìˆ˜ë¥¼ í™•ì¸
 	if (x == 1)
 		return false;
 	for (int i = 2; i <= sqrt(x); i++) {
 		if (x % i == 0)
-			return false; // i·Î ³ª´©¾î¶³¾îÁö´Â °Ô ÇÏ³ª¶óµµ ÀÖÀ¸¸é ¼Ò¼ö ¾Æ´Ô
+			return false; // ië¡œ ë‚˜ëˆ„ì–´ë–¨ì–´ì§€ëŠ” ê²Œ í•˜ë‚˜ë¼ë„ ìˆìœ¼ë©´ ì†Œìˆ˜ ì•„ë‹˜
 	}
-	return true; // ³ª´©¾î ¶³¾îÁöÁö ¾Ê´Â´Ù¸é ¼Ò¼ö
+	return true; // ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ì§€ ì•ŠëŠ”ë‹¤ë©´ ì†Œìˆ˜
 }
 
 int main()
@@ -25,8 +25,8 @@ int main()
 	
 	for (int i = 0; i < n; i++) {
 		cin >> m;
-		if (is_prime_number(m)) // ¼Ò¼ö¶ó¸é
-			count++; // Ä«¿îÆ®ÇÏ±â
+		if (is_prime_number(m)) // ì†Œìˆ˜ë¼ë©´
+			count++; // ì¹´ìš´íŠ¸í•˜ê¸°
 	}
 	cout << count << '\n';
 

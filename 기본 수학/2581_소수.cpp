@@ -21,10 +21,10 @@ int main()
 	cin >> m >> n;
 	
 	for (int i = m; i <= n; i++) {
-		if (is_prime_num(i)) { // �Ҽ���� ����
+		if (is_prime_num(i)) { // 소수라면 실행
 			sum += i;
-			if (min > i) // ���� �ּڰ����� i�� �۴ٸ�
-				min = i; // i�� �ּڰ��� ��ü
+			if (min > i) // 현재 최솟값보다 i가 작다면
+				min = i; // i로 최솟값을 교체
 		}
 	}
 

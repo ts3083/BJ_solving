@@ -11,9 +11,9 @@ int main()
 	long long n, m;
 	long long min_liter = 0;
 	long long sum = 0;
-	vector<long> dist; // µµ½Ã »çÀÌÀÇ °Å¸®
-	vector<long> cost; // µµ½ÃÀÇ ¸®ÅÍ´ç °¡°İ
-	cin >> n; // µµ½Ã °³¼ö ÀÔ·Â¹Ş±â
+	vector<long> dist; // ë„ì‹œ ì‚¬ì´ì˜ ê±°ë¦¬
+	vector<long> cost; // ë„ì‹œì˜ ë¦¬í„°ë‹¹ ê°€ê²©
+	cin >> n; // ë„ì‹œ ê°œìˆ˜ ì…ë ¥ë°›ê¸°
 	for (int i = 0; i < n - 1; i++) {
 		cin >> m;
 		dist.push_back(m);
@@ -22,15 +22,15 @@ int main()
 		cin >> m;
 		cost.push_back(m);
 	}
-	// °Å¸®¿Í ÁÖÀ¯¼Ò °¡°İÀÌ °áÁ¤µÈ »óÅÂ
+	// ê±°ë¦¬ì™€ ì£¼ìœ ì†Œ ê°€ê²©ì´ ê²°ì •ëœ ìƒíƒœ
 
 	min_liter = cost[0];
 	for (int i = 1; i <= n - 1; i++) { 
-		if (min_liter > cost[i]) { // ´ÙÀ½ µµ½ÃÀÇ ÁÖÀ¯°ªÀÌ ´õ ½Î´Ù¸é ÃÖ¼ÒÇÑ ¸¸À» ³Ö°í 
+		if (min_liter > cost[i]) { // ë‹¤ìŒ ë„ì‹œì˜ ì£¼ìœ ê°’ì´ ë” ì‹¸ë‹¤ë©´ ìµœì†Œí•œ ë§Œì„ ë„£ê³  
 			sum += min_liter * dist[i - 1];
-			min_liter = cost[i]; // ÃÖ¼Ò ÁÖÀ¯°ª ±³Ã¼
+			min_liter = cost[i]; // ìµœì†Œ ì£¼ìœ ê°’ êµì²´
 		}
-		else { // ´ÙÀ½ ÁÖÀ¯°ªÀÌ ´õ ºñ½Î´Ù¸é ÃÖ¼Ò ÁÖÀ¯°ªÀ» À¯Áö
+		else { // ë‹¤ìŒ ì£¼ìœ ê°’ì´ ë” ë¹„ì‹¸ë‹¤ë©´ ìµœì†Œ ì£¼ìœ ê°’ì„ ìœ ì§€
 			sum += min_liter * dist[i - 1];
 		}
 	}

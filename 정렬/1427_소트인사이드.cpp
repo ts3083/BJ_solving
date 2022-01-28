@@ -11,12 +11,12 @@ bool compare(int a, int b) {
 int main()
 {
 	string s;
-	cin >> s; // ¹®ÀÚ¿­·Î Ã³À½¿¡ ¼ýÀÚ¸¦ ÀÔ·Â¹Þ±â
+	cin >> s; // ë¬¸ìžì—´ë¡œ ì²˜ìŒì— ìˆ«ìžë¥¼ ìž…ë ¥ë°›ê¸°
 	vector<int> v(s.length());
 	for (int i = 0; i < s.length(); i++) {
 		v[i] = s[i] - '0';
 	}
-	sort(v.begin(), v.end(), compare); // ³»¸²Â÷¼ø Á¤·Ä
+	sort(v.begin(), v.end(), compare); // ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 
 	for (int i = 0; i < v.size(); i++) {
 		cout << v[i];

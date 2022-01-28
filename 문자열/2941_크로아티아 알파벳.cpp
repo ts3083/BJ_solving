@@ -6,15 +6,15 @@ using namespace std;
 int main()
 {
 	vector<string> v = { "c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z=" };
-	// string ÀÚ·áÇü vector »ý¼º + °¢°¢ÀÇ ¿ø¼Ò´Â string dataÀÌ´Ù.
+	// string ìžë£Œí˜• vector ìƒì„± + ê°ê°ì˜ ì›ì†ŒëŠ” string dataì´ë‹¤.
 	string s;
 	cin >> s;
 	for (int i = 0; i < v.size(); i++) {
 		for (;;) {
-			if (s.find(v[i]) == string::npos) { // findÇÔ¼ö¸¦ ÅëÇØ ¹®ÀÚ¿­ Ã£±â + ¹®ÀÚ¿­ÀÌ ¾ø´Ù¸é npos ¹ÝÈ¯
+			if (s.find(v[i]) == string::npos) { // findí•¨ìˆ˜ë¥¼ í†µí•´ ë¬¸ìžì—´ ì°¾ê¸° + ë¬¸ìžì—´ì´ ì—†ë‹¤ë©´ npos ë°˜í™˜
 				break;
 			}
-			else { // Ã£°íÀÚÇÏ´Â ¹®ÀÚ¿­À» Ã£´Â´Ù¸é ±³Ã¼
+			else { // ì°¾ê³ ìží•˜ëŠ” ë¬¸ìžì—´ì„ ì°¾ëŠ”ë‹¤ë©´ êµì²´
 				s.replace(s.find(v[i]), v[i].length(), "a");
 			}
 		}

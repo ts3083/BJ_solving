@@ -11,9 +11,9 @@ int main()
 	vector<int> v(n);
 
 	for (int i = 0; i < n; i++) {
-		cin >> v[i]; // 悼利 硅凯 积己
+		cin >> v[i]; // 霃欖爜 氚办棿 靸濎劚
 	}
-	sort(v.begin(), v.end()); // 坷抚瞒鉴 沥纺
+	sort(v.begin(), v.end()); // 鞓る彀垳 鞝曤牞
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j <= i; j++) {

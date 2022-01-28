@@ -16,8 +16,8 @@ int main()
 	for (int i = 0; i < n; i++) {
 		cin >> v[i];
 	}
-	vector<int> cv(v); // ÀÔ·Â¹ŞÀº º¤ÅÍ¸¦ º¹»ç
-	sort(cv.begin(), cv.end()); // ¿À¸§Â÷¼ø Á¤·Ä
+	vector<int> cv(v); // ì…ë ¥ë°›ì€ ë²¡í„°ë¥¼ ë³µì‚¬
+	sort(cv.begin(), cv.end()); // ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 
 	cv.erase(unique(cv.begin(), cv.end()), cv.end());
 	for (int i = 0; i < n; i++) {

@@ -18,11 +18,6 @@ int w(int a, int b, int c) {
 
 int main()
 {
-	for (int i = 1; i < 21; i++)
-		for (int j = 1; j < 21; j++)
-			for (int k = 1; k < 21; k++)
-				dp[i][j][k] = w(i, j, k);
-
 	while (1) {
 		int a, b, c;
 		cin >> a >> b >> c;

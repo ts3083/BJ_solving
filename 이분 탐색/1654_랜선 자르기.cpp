@@ -32,8 +32,7 @@ int main()
 			high = mid - 1;
 		}
 		else { // sum >= n
-			if (result < mid)
-				result = mid;
+			result = mid;
 			start = mid + 1;
 		}
 	}

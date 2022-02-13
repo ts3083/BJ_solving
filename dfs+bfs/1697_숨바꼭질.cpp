@@ -23,14 +23,14 @@ void bfs(int start, int end) {
 				nx = index - 1;
 			else
 				nx = index * 2;
-			
+
 			if (nx < 0 || nx > 100000)
 				continue;
 			// 범위 안에 있고 그 위치에 처음가는 것이라면 큐 안에 삽입
 			if (graph[nx] == 0) {
 				q.push(nx);
 				graph[nx] = graph[index] + 1;
-			}			
+			}
 		}
 	}
 }
@@ -39,7 +39,7 @@ int main()
 {
 	int n, k; // 수빈의 위치 / 동생의 위치
 	cin >> n >> k;
-	
+
 	bfs(n, k);
 
 	cout << graph[k] << '\n';

@@ -7,11 +7,11 @@ using namespace std;
 vector<int> n(1000001);
 vector<int> arr;
 
-void InitNext(string& p, int M) { // InitNextÇÔ¼ö
+void InitNext(string& p, int M) { // InitNextí•¨ìˆ˜
 	int i = 1, j = 0;
 	n[0] = 0;
 	for (i; i < M; i++) {
-		while (p[i] != p[j]) { // j >= 0 ÀÌ¸é¼­ ºÒÀÏÄ¡ÇÏ¸é
+		while (p[i] != p[j]) { // j >= 0 ì´ë©´ì„œ ë¶ˆì¼ì¹˜í•˜ë©´
 			if (j == 0) {
 				n[i] = j;
 				break;
@@ -23,9 +23,9 @@ void InitNext(string& p, int M) { // InitNextÇÔ¼ö
 	}
 }
 
-void KMP(string& p, string& t, int M, int N) { // KMP ¾Ë°í¸®Áò
+void KMP(string& p, string& t, int M, int N) { // KMP ì•Œê³ ë¦¬ì¦˜
 	int j = 0, pos;
-	InitNext(p, M); // next ¹è¿­ ¸¸µé±â
+	InitNext(p, M); // next ë°°ì—´ ë§Œë“¤ê¸°
 	for (int i = 0; i < N; i++) {
 		while (t[i] != p[j]) {
 			if (j == 0)
@@ -51,8 +51,8 @@ int main()
 	string pattern;
 	getline(cin, text);
 	getline(cin, pattern);
-	int M = pattern.length(); // ÆĞÅÏÀÇ ±æÀÌ
-	int N = text.length(); // ÅØ½ºÆ®ÀÇ ±æÀÌ
+	int M = pattern.length(); // íŒ¨í„´ì˜ ê¸¸ì´
+	int N = text.length(); // í…ìŠ¤íŠ¸ì˜ ê¸¸ì´
 
 	KMP(pattern, text, M, N);
 

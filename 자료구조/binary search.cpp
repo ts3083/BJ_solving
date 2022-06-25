@@ -37,6 +37,12 @@ int myupper_bound(int arr[], int target, int n) { // target초과하는 첫번�
 	return start;
 }
 
+int count_sameElem(int arr[], int target, int n) { // 배열안에 원소가 target인 중복된 원소의 개수
+	int left = mylower_bound(arr, target, n);
+	int right = myupper_bound(arr, target, n);
+	return right - left;
+}
+
 int main()
 {
 	int* arr = new int[10]{ 1,2,3,4,5,6,6,6,9,10 };
